@@ -14,6 +14,10 @@ An interactive website which can manipulate 3D & 2D object and has detail of it.
 9. `Transparent` - To manipulate transparency of the 2D/3D part,  but must select the part first.
 10. `Reset button` - To reset everything.
 11. `Print button`- To print the part table.
+12. `Show All button` - For 3D object, show all 3d part.
+13. `Isolate button` - For 3D object, only show selected 3d part.
+14. `Copy button` - Copy part number of current row of part table.
+15. `Right click part table` - Display `Hide button`, `Show All button`, `Isolate button`, `Copy button` and `Hambergur button`
 
 
 ### Hover & Select

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+  
+  <head>
+    <meta charset="utf-8" />
+    <title>Rapid Catalog</title>
+    <link rel="icon" href="res/images/siteLogo.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#00152C" />
+    <meta name="description" content="Developed by Badrul Ijazi" />
+    <link rel="manifest" href="./manifest.json" />
+
+    <script src="./res/Redistributables/Cortona3DSolo.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"
+        integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+    <script src="./res/js/globalVariable.js" type="text/javascript"></script>
+    <script src="./res/js/audio.js" type="text/javascript"></script>
+    <script src="./res/js/exportCSV.js" type="text/javascript"></script>
+    <script src="./res/js/fullScreen.js" type="text/javascript"></script>
+    
+    <script language="javascript">
+      var docLanguage="en-US";
+              
+      var detailsTab = "Details";
+      var partsTab = "Parts";
+
+      var partNoHeader = "Part No.";
+      var descriptionHeader = "Description";
+      var qtyHeader = "Qty";
+      var itemHeader = "Item";
+      var remarksHeader = "Remarks";
+      var orderQtyLabel = "Order Qty";
+      var InterchangeableLabel = "Interchangeable";
+      var addOrderLabel = "Add To Order";
+      
+      var titleHeader = "Title";
+      var sectionHeader = "Section";
+      var docNoHeader = "Doc No.";
+      var partNumberHeader = "Part Number";
+      var operationHeader = "Operation";
+      var modelHeader = "Model";
+      var modelYearHeader = "Model Year";
+      var engineHeader = "Engine";
+      var transmissionHeader = "Transmission";
+      var driveTypeHeader = "LHD / RHD";
+      var bodyHeader = "Body";
+      var regionHeader = "Region";
+      var vinFromHeader = "VIN From";
+      var vinToHeader = "VIN To";
+      var revisionsHeader = "Revisions";
+      var createdHeader = "Created";
+      var revisedHeader = "Revised";
+      var commentsHeader = "Comments";
+      
+      var contextHide = "Hide";
+      var contextIsolate = "Isolate";
+      var contextShowAll = "Show All";
+      var contextLoading = "Loading...";
+      var contextCopy = "Copy";
+    </script>
+
+
+    <script language="javascript">
+      var baseUri = '.';
+      var ditaUri = '.';
+      var propInteractivityName = ditaUri + '/' + "CORTONA3D_IPC.interactivity.xml"
+      var resFolder = "res";
+      var totalMemoryValue = 1024;
+      var isTCPublish = false;
+      var displayType = 1;
+    </script>
+    
+    <link href="./res/css/style.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <div id="root"></div>
+    <div id="print"></div>
+    <canvas id="solo-canvas"></canvas>
+
+    <script src="./res/js/script.js" type="text/javascript"></script>
+  </body>
+</html>

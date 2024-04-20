@@ -1,0 +1,70 @@
+:root {
+    --color-flagBlue: #00152C;
+    --color-brigadeRed: #B61615;
+    --color-water: #BAD0DB;
+    --color-turf: #91954C;
+    --color-ice: #F7F4E5;
+    --color-sand: #EDDBB4;
+    --color-mud: #C18556;
+    --color-gravel: #9D9D9C;
+
+    --hover-color: #99BCCE;
+
+    --font-size: 4mm;
+}
+
+#root {
+    width: 100%;
+    height: 100%;
+    text-align: justify;
+    background-color: white;
+}
+
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--color-gravel);
+    border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--color-brigadeRed);
+}
+
+body {
+    margin: unset;
+    width: 100vw;
+    height: 100vh;
+}
+
+.App {
+    width: 100%;
+    height: 100%;
+}
+
+
+@page {
+    size: A4 portrait;
+    margin: 0;
+}
+
+
+@media print {
+    body>*:not(#print) {
+        display: none;
+    }
+}
+
+
+@media screen {
+    div#print {
+        display: none;
+    }
+}

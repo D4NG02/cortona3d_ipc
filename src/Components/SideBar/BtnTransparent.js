@@ -7,7 +7,7 @@ const transparent = {
     width: '10%',
     zIndex: '100',
     position: 'absolute',
-    backgroundColor: color.flagBlue,
+    backgroundColor: color.primary,
 
     [CustomTheme.breakpoints.down('md')]: {
         top: 222,

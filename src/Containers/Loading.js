@@ -20,11 +20,11 @@ export default function Loading() {
                         display: 'flex',
                         alignItems: 'center',
                         position: 'absolute',
-                        color: color.flagBlue,
+                        color: color.primary,
                         flexDirection: 'column',
                         transform: "translate(-50%, -50%)"
-                     }}
-                    >
+                    }}
+                >
                     <Typography className='loading-title' variant='h5' component='h5'>{window.loading_text}</Typography>
                     <CircularProgress size={100} />
                 </Box>

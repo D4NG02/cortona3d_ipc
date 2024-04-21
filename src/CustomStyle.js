@@ -1,19 +1,16 @@
 import { createTheme } from "@mui/material"
+import { red } from "@mui/material/colors"
 
 const color = {
-    flagBlue: '#00152C',
-    brigadeRed: '#B61615',
-    water: '#BAD0DB',
-    turf: '#91954C',
-    ice: '#F7F4E5',
-    sand: '#EDDBB4',
-    mud: '#C18556',
-    gravel: '#9D9D9C',
-
-    hover: '#99BCCE',
-
+    primary: '#86B7B8',
+    secondary: '#353D48',
+    gray: 'lightgray',
+    warning: red[500],
     white: '#FFF',
     black: '#252525',
+
+    select: '#9ec5c6',
+    hover: '#5d8080'
 }
 
 const CustomTheme = createTheme({
@@ -68,8 +65,8 @@ const CustomComponent = createTheme({
                                     textAlign: 'center',
                                     fontSize: '5mm',
                                     padding: '2mm 4mm',
-                                    color: color.flagBlue,
-                                    border: '1px solid ' +color.flagBlue,
+                                    color: color.primary,
+                                    border: '2px solid ' +color.secondary,
                                     borderTopWidth: 0,
                                 },
                                 '& td:first-of-type': {
@@ -89,8 +86,8 @@ const CustomComponent = createTheme({
                                         fontSize: 'inherit',
                                         background: 'unset',
                                         fontFamily: 'inherit',
-                                        color: color.flagBlue,
-                                        border: '1px solid ' +color.flagBlue,
+                                        color: color.primary,
+                                        border: '2px solid ' +color.secondary,
                                     },
                                 },
                                 '& tbody': {
@@ -99,15 +96,15 @@ const CustomComponent = createTheme({
                                         fontSize: 'inherit',
                                         background: 'unset',
                                         fontFamily: 'inherit',
-                                        color: color.flagBlue,
-                                        border: '1px solid ' +color.flagBlue,
+                                        color: color.primary,
+                                        border: '2px solid ' +color.secondary,
                                     },
                                     '& td:is(:nth-of-type(1), :nth-of-type(4))': {
                                         textAlign: 'center',
                                     },
                                     '& tr.warning > td:last-child': {
                                         fontWeight: 'bold',
-                                        color: color.brigadeRed,
+                                        color: color.warning,
                                     },
                                 },
                             }
@@ -147,16 +144,16 @@ const CustomComponent = createTheme({
                                 color: color.white,
                                 background: 'unset',
                                 textAlign: 'center',
-                                backgroundColor: color.flagBlue,
+                                backgroundColor: color.secondary,
                                 fontFamily: CustomTheme.font_family,
                                 
                                 [CustomTheme.breakpoints.down('sm')]: {
                                     padding: '6px 8px',
-                                    border: '3px solid ' +color.water,
+                                    border: '3px solid ' +color.gray,
                                 },
                                 [CustomTheme.breakpoints.up('sm')]: {
                                     padding: '8px 12px',
-                                    border: '5px solid ' +color.water,
+                                    border: '5px solid ' +color.gray,
                                 },
                             },
                         },
@@ -165,16 +162,16 @@ const CustomComponent = createTheme({
                             fontSize: 'inherit',
                             '& td': {
                                 fontSize: 'inherit',
-                                color: color.flagBlue,
+                                color: color.secondary,
                                 fontFamily: CustomTheme.font_family,
                                 
                                 [CustomTheme.breakpoints.down('sm')]: {
                                     padding: '6px 8px',
-                                    border: '3px solid ' +color.water,
+                                    border: '3px solid ' +color.gray,
                                 },
                                 [CustomTheme.breakpoints.up('sm')]: {
                                     padding: '8px 12px',
-                                    border: '5px solid ' +color.water,
+                                    border: '5px solid ' +color.gray,
                                 },
                             },
                             '& td:is(:nth-of-type(1), :nth-of-type(4))': {
@@ -188,11 +185,11 @@ const CustomComponent = createTheme({
                                 background: 'unset'
                             },
                             '& tr.selected > td': {
-                                backgroundColor: color.mud,
+                                backgroundColor: color.select,
                             },
                             '& tr.warning > td:last-child': {
                                 fontWeight: 'bold',
-                                color: color.brigadeRed,
+                                color: color.warning,
                             },
                             '& tr:hover > td': {
                                 backgroundColor: color.hover,
@@ -232,8 +229,8 @@ const CustomComponent = createTheme({
                         fontSize: '1rem',
                         padding: '8px 16px',
                         '&:hover ': {
-                            color: color.flagBlue,
-                            backgroundColor: color.water,
+                            color: color.primary,
+                            backgroundColor: color.hover,
                         },
                     },
                     '&.loading-title': {
@@ -266,11 +263,11 @@ const CustomComponent = createTheme({
                     minWidth: 0,
                     borderRadius: 0,
                     fontFamily: CustomTheme.font_family,
-                    color: color.flagBlue,
+                    color: color.primary,
                     padding: '0 8px',
 
                     '&.Mui-disabled': {
-                        color: color.flagBlue,
+                        color: color.primary,
                         cursor: 'default',
                         fontWeight: 'bold',
                     }
@@ -322,27 +319,27 @@ const CustomComponent = createTheme({
                     
                     '&[role="btnSideBar1"]': {
                         padding: '6px 8px',
-                        color: color.flagBlue,
+                        color: color.secondary,
                         backgroundColor: color.white,
                         '& img': {
                             filter: "brightness(1) invert(0)",
                         },
                         '&:hover': {
-                            color: color.white,
-                            backgroundColor: color.flagBlue,
+                            color: color.secondary,
+                            backgroundColor: color.primary,
                             '& img': {
                                 filter: "brightness(0) invert(1)",
                             },
                         },
                         '&.Mui-selected': {
                             color: color.white,
-                            backgroundColor: color.flagBlue,
+                            backgroundColor: color.secondary,
                             '& img': {
                                 filter: "brightness(0) invert(1)",
                             },
                             '&:hover': {
                                 color: color.white,
-                                backgroundColor: color.flagBlue,
+                                backgroundColor: color.primary,
                             },
                         },
                     },
@@ -350,21 +347,21 @@ const CustomComponent = createTheme({
                     '&[role="btnSideBar2"]': {
                         padding: '6px',
                         color: color.white,
-                        backgroundColor: color.flagBlue,
+                        backgroundColor: color.secondary,
                         '& img': {
                             filter: "brightness(0) invert(1)",
                         },
                         '&:hover': {
                             color: color.white,
-                            backgroundColor: color.water,
+                            backgroundColor: color.primary,
                         },
                         '&.Mui-selected': {
                             cursor: 'unset',
                             color: color.white,
-                            backgroundColor: color.water,
+                            backgroundColor: color.primary,
                             '&:hover': {
                                 color: color.white,
-                                backgroundColor: color.water,
+                                backgroundColor: color.primary,
                             },
                         },
                     },
@@ -386,7 +383,7 @@ const CustomComponent = createTheme({
             styleOverrides: {
                 root: {
                     boxShadow: 'unset',
-                    backgroundColor: color.water,
+                    backgroundColor: color.primary,
                 },
             },
         },
@@ -408,17 +405,17 @@ const CustomComponent = createTheme({
                 root: {
                     padding: 8,
                     fontSize: 14,
-                    fontWeight: '500',
+                    fontWeight: 400,
                     maxWidth: 'unset',
-                    color: color.flagBlue,
+                    color: color.white,
                     minWidth: '30%',
                     textTransform: "capitalize",
-                    backgroundColor: color.water,
+                    backgroundColor: color.primary,
                     fontFamily: CustomTheme.font_family,
                     '&.Mui-selected': {
-                        fontWeight: 'bold',
+                        fontWeight: 700,
                         color: color.white,
-                        backgroundColor: color.flagBlue,
+                        backgroundColor: color.secondary,
                     },
                     
                     [CustomTheme.breakpoints.down('sm')]: {
@@ -436,7 +433,7 @@ const CustomComponent = createTheme({
                     },
                 },
                 textColorInherit: {
-                    color: color.flagBlue,
+                    color: color.secondary,
                     opacity: 'unset',
                     '&.Mui-disabled': {
                         display: 'none'
@@ -451,10 +448,10 @@ const CustomComponent = createTheme({
                 root: {
                 },
                 colorPrimary: {
-                    color: color.flagBlue,
+                    color: color.primary,
                 },
                 colorSecondary: {
-                    color: color.white
+                    color: color.secondary,
                 },
     
                 track: {
@@ -486,28 +483,28 @@ const CustomComponent = createTheme({
                 head: {
                     fontWeight: 'bold',
                     color: color.white,
-                    backgroundColor: color.flagBlue,
+                    backgroundColor: color.secondary,
                     
                     [CustomTheme.breakpoints.down('sm')]: {
                         padding: '6px 8px',
-                        border: '3px solid ' +color.water,
+                        border: '3px solid ' +color.gray,
                     },
                     [CustomTheme.breakpoints.up('sm')]: {
                         padding: '8px 12px',
-                        border: '5px solid ' +color.water,
+                        border: '5px solid ' +color.gray,
                     },
                 },
                 body: {
-                    color: color.flagBlue,
+                    color: color.secondary,
                     backgroundColor: color.white,
                     
                     [CustomTheme.breakpoints.down('sm')]: {
                         padding: '6px 8px',
-                        border: '3px solid ' +color.water,
+                        border: '3px solid ' +color.gray,
                     },
                     [CustomTheme.breakpoints.up('sm')]: {
                         padding: '8px 12px',
-                        border: '5px solid ' +color.water,
+                        border: '5px solid ' +color.gray,
                     },
                 },
             },
@@ -521,6 +518,7 @@ const CustomComponent = createTheme({
                     fontFamily: CustomTheme.font_family,
 
                     '& h5.ContextMenuItem-view': {
+                        color: color.secondary,
                         margin: 'unset',
                         cursor: 'pointer',
                         fontWeight: 'normal',
@@ -536,12 +534,17 @@ const CustomComponent = createTheme({
 
                         '&.Mui-selected': {
                             cursor: 'default',
+                            fontWeight: 500,
                             color: color.white,
-                            backgroundColor: color.flagBlue,
+                            backgroundColor: color.primary,
                         },
                         '&:hover': {
-                            color: color.flagBlue,
-                            backgroundColor: color.water,
+                            color: color.white,
+                            backgroundColor: color.secondary,
+                        },
+                        '&.Mui-selected:hover': {
+                            color: color.white,
+                            backgroundColor: color.primary,
                         },
                     }
                 },

@@ -20,7 +20,7 @@ export default function Manual() {
                 </Tabs>
             </AppBar>
 
-            <Box bgcolor={color.water} className="manual-container">
+            <Box bgcolor={color.primary} className="manual-container">
                 <PartTable hidden={changeTab} />
                 <DetailTable hidden={changeTab} />
             </Box>
